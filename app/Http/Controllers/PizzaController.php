@@ -41,7 +41,7 @@ $pizzas = Pizza::latest()->get();
        $pizza -> name =request('name');
        $pizza -> base =request('base');
        $pizza -> type =request('type');
-    //    $pizza -> toppings =request('toppings');
+       $pizza -> toppings =request('toppings');
        
        $pizza ->save();
 
