@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
     <div class="flex-center position-ref full-height">
@@ -18,7 +18,7 @@
 
                 <a href="/pizzas">Back to All Pizzas</a>
 
-                <form action="/pizzas/{{ $pizzas->id }}" method="POST">
+                <form action="{{ route('pizzas.destroy', $pizza->id }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button>complete order</button>
